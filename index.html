@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Page</title>
+    <script>
+
+
+        onload = function () {
+            let nome = localStorage.getItem("things")
+            let h2 = document.getElementById("things")
+            h2.innerHTML = nome;
+          
+            for(things of nome){ 
+           
+            h2.innerHTML = change; 
+            JSON.parse(localStorage.getItem());   
+
+        
+        }
+        
+        }
+
+
+        function atualizar(i) {
+            var valor = i.value
+            for(things of valor){
+                console.log([valor])
+           
+
+            
+            let h2 = document.getElementById("things")
+            localStorage.setItem('things', JSON.stringify(valor));
+            h2.innerHTML = valor
+            localStorage.setItem("things", valor)
+
+        }
+    
+            // localStorage.setItem("things", JSON.stringify(things))
+        }
+
+
+
+        // function save (){
+
+        //     var tarefas = JSON.parse(localStorage.getItem("things") || "[]");
+        //     tarefas.push({nome})
+
+        //     localStorage.setItem(things, JSON.stringify(things));
+
+        // }
+
+
+
+       
+
+
+    </script>
+
+</head>
+
+<body>
+    <input id="container" type="text" onchange="atualizar(this)">
+
+
+
+
+<h2 id="things"></h2>
+
+
+
+</body>
+
+</html>
