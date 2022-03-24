@@ -5,97 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Page</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css"  href="./script.js">
 
     <html>
-    <script>
+     <script>
 
 
         onload = function () {
-            let nome = localStorage.getItem("minhaUl");
-            let h2 = document.getElementById("minhaUl");
+            let nome = localStorage.getItem("lista");
+            let h2 = document.getElementById("lista");
             h2.innerHTML = nome;
         }
-
-
-        var myNodelist = document.getElementsByTagName("LI");
-        var i;
-        for (i = 0; i < myNodelist.length; i++) {
-            var span = document.createElement("SPAN");
-            var txt = document.createTextNode("\u00D7");
-            span.className = "close";
-            span.appendChild(txt);
-            myNodelist[i].appendChild(span)
-        }
-
-
-        var close = document.getElementsByClassName("close");
-        var i;
-        for (i = 0; i < close.length; i++) {
-            close[i].onclick = function () {
-                var div = this.parentElement;
-                div.style.dsplay = "none";
-            }
-        }
-
-        var list = document.querySelector('ul');
-        list.addEventListener('click', function(ev) {
-            if (ev.target.tagName === 'LI') {
-                ev.target.classList.toggle('checked');
-            }
-        }, false);
-
 
         function newElement() {
             var li = document.createElement("li")
             var inputValue = document.getElementById("container").value
             var t = document.createTextNode(inputValue)
+            var valor = document.getElementById("container").value
+            
+
 
             li.appendChild(t);
             if (inputValue === '') {
                 alert("Você precisa escrever algo")
             } else {
-                document.getElementById("minhaUl").appendChild(li)
+                document.getElementById("minhaUl").appendChild(li)                
             }
             document.getElementById("container").value = "";
-
-            var span = document.createElement("SPAN");
-            var txt = document.createTextNode("\u00D7");
-            span.className = "close";
-            span.appendChild(txt);
-            li.appendChild(span);
-            localStorage.setItem("minhaUl")
-
-            for (i = 0; i < close.length; i++) {
-                close[i].onclick = function () {
-                    var div = this.parentElement;
-                    div.style.display = "none";
-                }
-            }
-
-
+          
         }
-
-
-
-
-
-
     </script>
 
-</head>
+    </head>
 
 <body>
     <div id="myDiv" class="header">
-
-        <input id="container" type="text" placeholder="Title...">
+        <h2>Lista de tarefas</h2>
+        <input id="container" type="text" placeholder="digite suas tarefas">
         <span onclick="newElement()" class="addBtn"> add</span>
     </div>
 
 
-    <ul id="minhaUl">
-        <h2>Lista de tarefas</h2>
-        <li class="checked">Pay bills</li>
+    <ul onclick="atualizar(this)" id="minhaUl">
+      <li id="lista" ></li>
+      
     </ul>
 
 </body>

@@ -21,14 +21,15 @@ span{
 }
 
 ul{
- margin-left:40%;
+ margin-left:300px;
 }
 li{
     list-style: none;
     margin-left: 10%;
 }
+
 h2{
-    color: black;
-    float: left;
-    
+    display:inline-block ;
+    margin-left: 330px;
+    margin-bottom: 30px;
 }
