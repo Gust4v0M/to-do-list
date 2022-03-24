@@ -8,16 +8,17 @@
     
     background-color: #5fdbda;
     overflow: auto;
-    padding: 20px;
+    padding: 30px;
     }
 
 input{
-    margin-left: 40%;
+    margin-left: 500px;
     background-color:white ;
 }
 
 span{
     background-color: #9dffff;
+    margin-right: 20px;
 }
 
 ul{
@@ -25,11 +26,11 @@ ul{
 }
 li{
     list-style: none;
-    margin-left: 10%;
+    margin-left: 270px;
 }
 
 h2{
     display:inline-block ;
-    margin-left: 330px;
+    margin-left: 500px;
     margin-bottom: 30px;
 }
