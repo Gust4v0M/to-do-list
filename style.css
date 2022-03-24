@@ -1,0 +1,34 @@
+*{
+    background-color: lightblue;
+    margin: 0px;
+}
+
+
+#myDiv{
+    
+    background-color: #5fdbda;
+    overflow: auto;
+    padding: 20px;
+    }
+
+input{
+    margin-left: 40%;
+    background-color:white ;
+}
+
+span{
+    background-color: #9dffff;
+}
+
+ul{
+ margin-left:40%;
+}
+li{
+    list-style: none;
+    margin-left: 10%;
+}
+h2{
+    color: black;
+    float: left;
+    
+}
